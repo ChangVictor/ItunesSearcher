@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="J5c-yV-bqR" customClass="MediaViewCell" customModule="ItunesSearcher" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="516" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J5c-yV-bqR" id="QqZ-Gq-MoJ">
+                <rect key="frame" x="0.0" y="0.0" width="516" height="199.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fMZ-go-C3g">
+                        <rect key="frame" x="130" y="19" width="358" height="46.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fco-T1-dpE">
+                                <rect key="frame" x="0.0" y="0.0" width="358" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3F-5w-BOr">
+                                <rect key="frame" x="0.0" y="28.5" width="358" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anu-sQ-dEW">
+                        <rect key="frame" x="128" y="73.5" width="360" height="119.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iBH-aw-jPW">
+                        <rect key="frame" x="20" y="0.0" width="100" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="fJt-1k-yTS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="anu-sQ-dEW" firstAttribute="top" secondItem="fMZ-go-C3g" secondAttribute="bottom" constant="8" id="4E8-ef-Aen"/>
+                    <constraint firstItem="anu-sQ-dEW" firstAttribute="leading" secondItem="iBH-aw-jPW" secondAttribute="trailing" constant="8" id="DlV-nM-z7b"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="anu-sQ-dEW" secondAttribute="trailing" constant="8" id="G9v-7y-oiU"/>
+                    <constraint firstItem="anu-sQ-dEW" firstAttribute="bottom" secondItem="QqZ-Gq-MoJ" secondAttribute="bottomMargin" constant="4" id="JF5-RP-Gc2"/>
+                    <constraint firstItem="fMZ-go-C3g" firstAttribute="top" secondItem="QqZ-Gq-MoJ" secondAttribute="topMargin" constant="8" id="JKe-8n-KqY"/>
+                    <constraint firstItem="iBH-aw-jPW" firstAttribute="leading" secondItem="QqZ-Gq-MoJ" secondAttribute="leadingMargin" id="YEo-hr-sum"/>
+                    <constraint firstItem="iBH-aw-jPW" firstAttribute="centerY" secondItem="QqZ-Gq-MoJ" secondAttribute="centerY" id="j7C-vw-3dl"/>
+                    <constraint firstItem="fMZ-go-C3g" firstAttribute="leading" secondItem="iBH-aw-jPW" secondAttribute="trailing" constant="10" id="krs-TT-VOc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fMZ-go-C3g" secondAttribute="trailing" constant="8" id="rB3-NV-9Qr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="iBH-aw-jPW" firstAttribute="top" secondItem="QqZ-Gq-MoJ" secondAttribute="top" id="Ntw-CY-iwH"/>
+            </constraints>
+            <connections>
+                <outlet property="artistNameLabel" destination="D3F-5w-BOr" id="XKD-Tp-Ru2"/>
+                <outlet property="longDescriptionTextView" destination="anu-sQ-dEW" id="AnR-ao-G4S"/>
+                <outlet property="mediaImageView" destination="iBH-aw-jPW" id="agZ-Ky-gZz"/>
+                <outlet property="trackNameLabel" destination="Fco-T1-dpE" id="cfR-ms-jl9"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="19"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="appicon" width="60" height="60"/>
+    </resources>
+</document>

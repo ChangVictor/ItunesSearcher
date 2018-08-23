@@ -27,12 +27,6 @@ class MediaViewCell: UITableViewCell {
 			longDescriptionTextView.text = ""
 			guard let url = URL(string: song?.getArtWork() ?? "") else { return }
 			mediaImageView.sd_setImage(with: url, completed: nil)
-			
-			let audio = song?.getPreview()
-			let songUrl = URL(string: audio!)
-			if let previewUrl = songUrl {
-				self.player = AVPlayer(url: previewUrl)
-			}
 
 		}
 	}

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AVKit
 
 class TvShowSearchController: UITableViewController, UISearchBarDelegate {
 	
@@ -77,6 +78,23 @@ class TvShowSearchController: UITableViewController, UISearchBarDelegate {
 	
 	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 		return self.tvShowResults.count == 0 ? 250 : 0
+	}
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		guard let indexPath = tableView.indexPathForSelectedRow else { return }
+		guard let currentCell = tableView.cellForRow(at: indexPath) as? MediaViewCell else { return }
+		guard let currentItem = currentCell.tvShow?.getPreview() else { return }
+		
+		let videoURL = NSURL(string: currentItem)
+		let player = AVPlayer(url: videoURL! as URL)
+		
+		let playerViewController = AVPlayerViewController()
+		
+		playerViewController.player = player
+		
+		self.present(playerViewController, animated: true) { ()-> Void in
+			playerViewController.player!.play()
+		}
 	}
 	
 }

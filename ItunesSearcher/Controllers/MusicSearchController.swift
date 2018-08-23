@@ -84,7 +84,6 @@ class MusicSearchController: UITableViewController, UISearchBarDelegate {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		guard let indexPath = tableView.indexPathForSelectedRow else { return }
-
 		guard let currentCell = tableView.cellForRow(at: indexPath) as? MediaViewCell else { return }
 		guard let currentItem = currentCell.song?.getPreview() else { return }
 	
